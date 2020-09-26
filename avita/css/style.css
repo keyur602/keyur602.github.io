@@ -13,7 +13,7 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -57,12 +57,31 @@ select:focus{
   flex-wrap: wrap;
   margin: 0 -15px;
 }
-
+section{
+  padding: 100px 0;
+}
+.section-title
+{
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 2px;
+}
+.sec-heading
+{
+  /*margin: 0px;*/
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #181818; 
+}
 /*====================================================
 ====================header============================
 ======================================================*/
 
-.test{
+.headers{
   position: fixed;
   z-index: 99;
   width: 100%;
@@ -236,7 +255,78 @@ header nav ul li a:hover{
   margin: 0 5px;
 }
 
+/*====================================================
+==============about==================================
+======================================================*/
 
 
-
-
+.about-text
+ {
+  padding-right: 12%;
+  margin-bottom: 40px;
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #383838;
+  letter-spacing: 0.8px;
+  }
+.skills{
+  width: 80%;
+}
+.skills .progressbar-area h6{
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+}
+.progress-bar{
+    background-color: #333;
+}
+.progressbar-area .progress{
+  overflow: visible;
+  height: 4px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
+  background: #d7d7d7;
+  box-shadow: none;
+  font-weight: 400;
+}
+.progressbar-area .progress span
+{
+  position: absolute;
+  top: 200px;
+  right: 256px;
+  display: inline-block;
+  min-width: 25px;
+  height: 22px;
+  padding: 0 8px;
+  text-align: center;
+  letter-spacing: 0;
+  color: #fff;
+  background-color: #333;
+  line-height: 21px;
+  width: 36px;
+}.progressbar-area .progress .prog2 span
+{
+  top: 282px;
+  right: 176px;
+}.progressbar-area .progress .prog3 span
+{
+  top: 360px;
+  right: 222px;
+}
+.progressbar-area .progress span:before
+{
+  position: absolute;
+    bottom: -4px;
+    left: 12px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    content: "";
+    transform: rotate(45deg);
+    background-color: #333;
+}
