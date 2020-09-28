@@ -78,10 +78,12 @@ section{
   color: #181818; 
 }
 #loader{
+  display: flex;
+  justify-content: center;
+  width: 100%;
   position: absolute;
-  right: 45%;
-  top: 50%;
-
+  top: 45%;
+  bottom: 45%;
 }
 /*====================================================
 ====================header============================
@@ -330,6 +332,11 @@ header nav ul li a:hover{
     width: 100%;
     position: relative;
     line-height: 0;
+  }
+  .about-img img{
+    height: 100%;
+    width: 100%;
+
   }
   .img-overlay
   {

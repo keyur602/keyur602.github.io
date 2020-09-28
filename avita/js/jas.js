@@ -1,7 +1,7 @@
 var lods;
 
 function lod() {
-  lods = setTimeout(showPage, 5000);
+  lods = setTimeout(showPage, 500);
 }
 
 function showPage() {
