@@ -1,7 +1,19 @@
+var lods;
+
+function lod() {
+  lods = setTimeout(showPage, 5000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("new").style.display = "block";
+}
+
+
+
 function openNav() {
   document.getElementById("mySidepanel").style.width = "250px";
 }
-
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
@@ -19,3 +31,5 @@ function scrollFunction() {
 	    document.getElementById("navbar").style.backgroundColor ="rgba(0,0,0,0.7)";
 	}
 }
+
+

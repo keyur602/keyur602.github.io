@@ -4,20 +4,20 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 	<title>Avita</title>
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/madiya.css">
     
 </head>
-<body>
+<body onload="lod()">
+<img src="images/loading.gif" id="loader">
+<div id="new" style="display: none;">
 
-
-
-    <header class="headers"  id="navbar">
+    <header class="headers" id="navbar">
         <div class="container">
             <div class="row justify-content-between position-relative">
                 <div class="col-md-1">
@@ -87,26 +87,30 @@
                                 <h6>Html</h6>
                                 <div class="progress">
                                     <div class="progress-bar prog1" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" data-progress="80%" style="width: 80%; transition: all 2s ease-in 0s;">
-                                        <span>80%</span>
+                                        <!-- <span>80%</span> -->
                                     </div>
                                 </div>
                                 <h6>Css</h6>
                                 <div class="progress">
                                     <div class="progress-bar prog2" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-progress="94%" style="width: 94%; transition: all 2s ease-in 0s;">
-                                        <span>90%</span>
+                                        <!-- <span>90%</span> -->
                                     </div>
                                 </div>
                                 <h6>JavaScript</h6>
                                 <div class="progress">
                                     <div class="progress-bar prog3" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" data-progress="86%" style="width: 86%; transition: all 2s ease-in 0s;">
-                                        <span>86%</span>
+                                        <!-- <span>86%</span> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="about-img">
+                        <img src="images/about.jpg" width="100%">
+                        <div class="img-overlay"></div>
+                </div>
             </div>            
         </div>        
     </section>
@@ -114,7 +118,7 @@
 
 
 
-
+</div>
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

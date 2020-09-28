@@ -13,7 +13,7 @@ html{
   scroll-behavior: smooth;
 }
 body{
-    font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway';
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -77,6 +77,12 @@ section{
   font-weight: 800;
   color: #181818; 
 }
+#loader{
+  position: absolute;
+  right: 45%;
+  top: 50%;
+
+}
 /*====================================================
 ====================header============================
 ======================================================*/
@@ -120,7 +126,7 @@ header nav ul li a{
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: var(--bg-color);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -150,7 +156,7 @@ header nav ul li a{
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color:rgba(0,0,0,0.7);
+  background-color:rgba(0,0,0,-3.7);
   color: white;
   /*padding: 10px 15px;*/
   border: none;
@@ -293,7 +299,7 @@ header nav ul li a:hover{
   background: #d7d7d7;
   box-shadow: none;
   font-weight: 400;
-}
+}/*
 .progressbar-area .progress span
 {
   position: absolute;
@@ -317,16 +323,51 @@ header nav ul li a:hover{
 {
   top: 360px;
   right: 222px;
-}
-.progressbar-area .progress span:before
-{
+}*/
+.about-img
+  {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    line-height: 0;
+  }
+  .img-overlay
+  {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.8s ease 0s;
+    transform: scale(0);
+  }
+  .img-overlay::before
+  {
+  content: "";
+  height: 130px;
+  width: 130px;
+  top: 18px;
+  left: 18px;
   position: absolute;
-    bottom: -4px;
-    left: 12px;
-    display: block;
-    width: 8px;
-    height: 8px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  }
+
+  .img-overlay::after
+  {
     content: "";
-    transform: rotate(45deg);
-    background-color: #333;
-}
+    height: 130px;
+    width: 130px;
+    bottom: 18px;
+    right: 18px;
+    position: absolute;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+
+  .about-img:hover .img-overlay
+  {
+    visibility: visible;
+    transform: scale(1);
+  }
