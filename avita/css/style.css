@@ -59,7 +59,7 @@ select:focus{
 }
 .row1{
   display: flex;
-  /*flex-wrap: wrap;*/
+  flex-wrap: wrap;
   margin: 0 -15px;
 }
 section{
@@ -99,13 +99,12 @@ section{
   justify-content: center;
   width: 100%;
   position: absolute;
-  top: 45%;
-  bottom: 45%;
+  top: 50%;
+  
 }
 /*====================================================
 ====================header============================
 ======================================================*/
-
 .headers{
   position: fixed;
   z-index: 99;
@@ -169,7 +168,7 @@ header nav ul li a{
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
+  font-size: 36px; 
 }
 
 .openbtn {
@@ -378,7 +377,7 @@ header nav ul li a:hover{
 ======================================================*/
 .service-back{
   background-image: url('../images/serviceBg.jpg');
-  height: 100vh;
+  height: 100%;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -410,6 +409,8 @@ header nav ul li a:hover{
 }
 .service-right-out-box{
   position: relative;
+  height: 250px;
+  width: 540px;
   overflow: hidden;
   margin-bottom: 36px;
   text-align: center;
@@ -417,7 +418,7 @@ header nav ul li a:hover{
 .ovr-service-over{
   transform: translate3d(0px, 0px, 0px);
   transition: all 0.25s ease 0s;
-  width: 1080px;
+  /*width: 1080px;*/
 }
 .ovr-service{
   width: 270px;
@@ -464,7 +465,7 @@ header nav ul li a:hover{
   line-height: 26px;
 }
 .owl-nav{
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
 }
 .owl-nav .prev{
@@ -475,7 +476,13 @@ header nav ul li a:hover{
 }
 .owl-nav .next{
   color: #000;
-    padding: 4px 11px;
-    background: #fff;
-    border-radius: 0px;
+  padding: 4px 11px;
+  background: #fff;
+  border-radius: 0px;
+}
+.ovr-service:hover .itm-inner span i{
+  color: #fff;
+}
+.ovr-service:hover .itm-inner span{
+  background-color: #4d4d4d;
 }

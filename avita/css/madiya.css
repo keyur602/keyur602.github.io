@@ -1,14 +1,22 @@
 
-@media only screen and (max-width: 1200px) {
-
-}
-
+/*@media only screen and (max-width: 1112px) {
+	.ovr-service-over{
+		width: 300px
+	}
+}*/
 @media only screen and (max-width: 991px) {
 .about-img
   {
     position: relative;
     max-width: 60%;
   }
+  .ovr-service-over{
+  	margin-top: 15px;
+  	display: flex;
+	justify-content: center;
+	width: 540px;
+  }
+  
 
 } 
 @media only screen and (max-width: 768px) {
@@ -32,6 +40,10 @@
 
 }
 @media only screen and (max-width: 572px) {
+	.service-right-out-box{
+		width: 260px;
+		margin: 0 auto;
+	}
 }
 @media only screen and (max-width: 480px) {
 	.typ-wrap h2{

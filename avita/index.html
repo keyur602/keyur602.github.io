@@ -19,13 +19,14 @@
 </div>
 <div id="new" style="display: none;">
 
-    <header class="headers" id="navbar">
+    <header class="headers" id="navbar" style="box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 6px;">
         <div class="container">
             <div class="row justify-content-between position-relative">
                 <div class="col-md-1">
-                    <a href="index.html" class="logo"><img src="images/logoWhite.png"></a>
+                    <a href="index.html" class="logo" id="logo"><img src="images/logoWhite.png"></a>
+                    <a href="index.html" class="logo" id="logo1" style="display: none;"><img src="images/logoBlack.png"></a>
                 </div>
-                <button class="openbtn" onclick="openNav()">☰</button>  
+                <button class="openbtn" id="button-nev" onclick="openNav()">☰</button>  
                 <div id="mySidepanel" class="sidepanel">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                   <a href="#Home">Home</a>
@@ -39,13 +40,13 @@
                 <div class="w-11c">
                     <nav class="navbar1">
                         <ul>
-                            <li><a href="#Home">Home</a></li>
-                            <li><a href="#About">About</a></li>
-                            <li><a href="#Services">Services</a></li>
-                            <li><a href="#Portfolio">Portfolio</a></li>
-                            <li><a href="#Testimonial">Testimonial</a></li>
-                            <li><a href="#Blog">Blog</a></li>
-                            <li><a href="#Contact">Contact</a></li>
+                            <li><a href="#Home" id="navbarjs1">Home</a></li>
+                            <li><a href="#About" id="navbarjs2">About</a></li>
+                            <li><a href="#Services" id="navbarjs3">Services</a></li>
+                            <li><a href="#Portfolio" id="navbarjs4">Portfolio</a></li>
+                            <li><a href="#Testimonial" id="navbarjs5">Testimonial</a></li>
+                            <li><a href="#Blog" id="navbarjs6">Blog</a></li>
+                            <li><a href="#Contact" id="navbarjs7">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -184,14 +185,14 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+                    </div>
 
+                        
+                    </div>                    
                     <div class="owl-nav">
                         <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                         <a class="next" onclick="plusSlides(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
-                        
-                    </div>                    
                 </div>
             </div>
         </div>
