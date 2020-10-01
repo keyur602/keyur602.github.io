@@ -517,6 +517,7 @@ header nav ul li a:hover{
   width: 100%;
   margin-bottom: 56px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .Portfolio-btn{
@@ -541,7 +542,8 @@ header nav ul li a:hover{
   z-index: 1;
   transition: all 0.5s;
   overflow: hidden;
-  padding:0; 
+  padding:0;
+  display: block;
 }
 .gallery_product img{
   transition: all 0.5s;
