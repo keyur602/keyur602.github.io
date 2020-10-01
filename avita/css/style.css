@@ -41,6 +41,11 @@ button:focus,
 select:focus{
   margin: 0;
   padding: 0;
+  outline: none;
+}
+button{
+  border: none;
+  text-decoration: none;
 }
 .w-1{
   width: 8.33%;
@@ -64,6 +69,15 @@ select:focus{
 }
 section{
   padding: 100px 0;
+}
+.titels{
+  text-align: center;
+}
+.sec-heading-ssenter{
+  margin: 0 20px 10px;
+  font-size: 40px;
+  font-weight: 800;
+  color: #181818;
 }
 .section-title
 {
@@ -426,7 +440,7 @@ header nav ul li a:hover{
 .itm{
   margin-left: 20px;
   background: #fff;
-  padding: 20px;
+  padding: 15px;
 }
 .itm-inner{
   background: #fff;
@@ -494,3 +508,49 @@ header nav ul li a:hover{
 .ovr-service:hover .itm-inner span{
   background-color: #4d4d4d;
 }
+/*====================================================
+==============Portfolio==================================
+======================================================*/
+
+
+.Portfolio-batten{
+  width: 100%;
+  margin-bottom: 56px;
+  display: flex;
+  justify-content: center;
+}
+.Portfolio-btn{
+  border: none;
+  background-color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    padding: 12px 14px;
+    font-weight: 700;
+    color: #696969;
+    margin: 0px 10px;
+    transition: all 0.2s;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.Portfolio-btn-actve{
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+.gallery_product{
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+  overflow: hidden;
+  padding:0; 
+}
+.gallery_product img{
+  transition: all 0.5s;
+    height: auto;
+    width: 100%;
+}
+
+
+
+
+
+
