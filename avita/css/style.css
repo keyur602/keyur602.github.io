@@ -542,7 +542,7 @@ header nav ul li a:hover{
   z-index: 1;
   transition: all 0.5s;
   overflow: hidden;
-  padding:0;
+  padding:10px;
   display: block;
 }
 .gallery_product img{
