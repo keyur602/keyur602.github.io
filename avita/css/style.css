@@ -540,19 +540,82 @@ header nav ul li a:hover{
 .gallery_product{
   position: relative;
   z-index: 1;
-  transition: all 0.5s;
+  transition: all 0.5s ease 0s;
   overflow: hidden;
-  padding:10px;
+  padding:0;
   display: block;
 }
-.gallery_product img{
+.gallery_product-2{
+  position: relative;
   transition: all 0.5s;
-    height: auto;
-    width: 100%;
+  padding:0;
+  display: block;
+  transform: scale(1); 
+}
+.all{
+  padding: 0;
+}
+.gallery_product-2 img{
+  transition: all 0.5s;
+  height: auto;
+  width: 100%;
+  transform: rotate(0deg);    
+}
+.gallery_product:hover .gallery_product-2{
+  transform: scale(1.3);
+}
+.gallery_product:hover .gallery_product-2 img{
+  transform: rotate(5deg);
 }
 
-
-
-
-
+.portfolio-overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  transform: perspective(700px) rotateY(-90deg);
+  /*visibility: visible;*/
+  /*visibility: hidden;*/
+  /*display: none;*/
+  transition: all 0.9s;
+}
+.gallery_product:hover ~.portfolio-overlay{
+  background-color: rgba(0,0,0,0.7);
+  transform: rotateY(0deg);
+  /*display: block;*/
+}
+.portfolio-overlay-itam{
+  position: absolute;
+  top: 30%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.portfolio-overlay-itam p{
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.portfolio-overlay-itam a{
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: #929292;
+  margin-right: 5px;
+}
+.portfolio-overlay-itam a i{
+  line-height: 40px;
+  font-size: 15px;
+}
 
