@@ -547,7 +547,7 @@ header nav ul li a:hover{
 }
 .gallery_product-2{
   position: relative;
-  transition: all 0.5s;
+  transition: all 0.9s;
   padding:0;
   display: block;
   transform: scale(1); 
@@ -581,9 +581,10 @@ header nav ul li a:hover{
   /*display: none;*/
   transition: all 0.9s;
 }
-.gallery_product:hover ~.portfolio-overlay{
+.gallery_product:hover .portfolio-overlay{
   background-color: rgba(0,0,0,0.7);
-  transform: rotateY(0deg);
+  transform: perspective(700px) rotateY(0deg);
+  overflow: hidden;
   /*display: block;*/
 }
 .portfolio-overlay-itam{
@@ -613,9 +614,13 @@ header nav ul li a:hover{
   justify-content: center;
   background-color: #929292;
   margin-right: 5px;
+  transition: all 0.5s ease 0s;
 }
 .portfolio-overlay-itam a i{
   line-height: 40px;
   font-size: 15px;
 }
 
+.portfolio-overlay-itam a:hover{
+  background-color: #5f5f5f;
+}
