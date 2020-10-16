@@ -121,7 +121,7 @@ section{
   width: 100%;
   background-color:var(--bg-color);
   /*height: 110px; */
-  line-height: 100px;
+  line-height: 80px;
 }
 /*header nav{
   float: right;
@@ -156,7 +156,7 @@ header nav ul li a{
   left: 0;
   background-color:rgba(0,0,0,0.9);
   overflow-x: hidden;
-  transition: 0.5s;
+transition: all 0.5s ease 0s;
   padding-top: 60px;
 }
 
@@ -167,8 +167,7 @@ header nav ul li a{
   color: #818181;
   display: block;
   line-height: 40px;
-  transition: 0.3s;
-}
+transition: all 0.5s ease 0s;}
 
 .sidepanel a:hover {
   color:  var(--bg-hover-color);
@@ -383,7 +382,7 @@ header nav ul li a:hover{
   }
 
 /*====================================================
-==============about==================================
+==============service==================================
 ======================================================*/
 .service-back{
   background-image: url('../images/serviceBg.jpg');
@@ -407,7 +406,7 @@ header nav ul li a:hover{
   background-color: #fff;
   color: #000;
   display: inline-block;
-  transition: all 0.5s;
+  transition: all 0.5s ease 0s;
   font-weight: 600;
 }
 .service-btn:hover{
@@ -453,14 +452,14 @@ header nav ul li a:hover{
   border-radius: 40px;
   margin-bottom: 12px;
   background: #fcfcfc;
-  transition: all 0.5s;
+  transition: all 0.5s ease 0s;
   margin-top: 6px;
 }
 .itm-inner span i{
   color: #363636;
   line-height: 62px;
   font-size: 20px;
-  transition: all 0.5s;
+  transition: all 0.5s ease 0s;
 }
 .itm-inner p{
   font-weight: 700;
@@ -524,7 +523,7 @@ header nav ul li a:hover{
     font-weight: 700;
     color: #696969;
     margin: 0px 10px;
-    transition: all 0.2s;
+    transition: all 0.5s ease 0s;
     font-size: 16px;
     text-transform: capitalize;
 }
@@ -542,7 +541,7 @@ header nav ul li a:hover{
 }
 .gallery_product-2{
   position: relative;
-  transition: all 0.9s;
+  transition: all 0.5s ease 0s;
   padding:0;
   display: block;
   transform: scale(1); 
@@ -551,7 +550,7 @@ header nav ul li a:hover{
   padding: 0;
 }
 .gallery_product-2 img{
-  transition: all 0.5s;
+  transition: all 0.5s ease 0s;
   height: auto;
   width: 100%;
   transform: rotate(0deg);    
@@ -571,16 +570,12 @@ header nav ul li a:hover{
   left: 0;
   z-index: 3;
   transform: perspective(700px) rotateY(-90deg);
-  /*visibility: visible;*/
-  /*visibility: hidden;*/
-  /*display: none;*/
-  transition: all 0.9s;
+  transition: all 0.5s ease 0s;
 }
 .gallery_product:hover .portfolio-overlay{
   background-color: rgba(0,0,0,0.7);
   transform: perspective(700px) rotateY(0deg);
   overflow: hidden;
-  /*display: block;*/
 }
 .portfolio-overlay-itam{
   position: absolute;
@@ -687,11 +682,11 @@ header nav ul li a:hover{
 .about-img{
   display: inline-block;
   border-radius: 100%;
-  animation:sk-stretchdelay 4s infinite ease-in-out;
+  animation:about-img-moving 4s infinite ease-in-out;
   animation-timing-function: linear;
 }
 
-@keyframes sk-stretchdelay {
+@keyframes about-img-moving {
   0%{ 
     transform: translateY(0px);
    }  
