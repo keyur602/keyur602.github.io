@@ -650,3 +650,58 @@ header nav ul li a:hover{
   bottom: -106px;
   z-index: -1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================================================
+=======================keyframes==========================
+========================================================*/
+
+
+
+
+.about-img{
+  display: inline-block;
+  border-radius: 100%;
+  animation:sk-stretchdelay 4s infinite ease-in-out;
+  animation-timing-function: linear;
+}
+
+@keyframes sk-stretchdelay {
+  0%{ 
+    transform: translateY(0px);
+   }  
+   25%{
+    transform: translateY(-20px);     
+   }
+   75%{
+    transform: translateY(20px);     
+   }
+   100%{
+    transform: translateY(0px);
+    }
+}
