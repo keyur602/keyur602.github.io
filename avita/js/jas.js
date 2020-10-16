@@ -78,10 +78,6 @@ function showSlides(n) {
   slides[slideIndex-2].style.display = "none";  
 }
 
-
-
-
-
 function slicbtn(btuvel){
 
 	var z = btuvel.value;

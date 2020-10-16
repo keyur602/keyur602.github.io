@@ -43,10 +43,6 @@ select:focus{
   padding: 0;
   outline: none;
 }
-button{
-  border: none;
-  text-decoration: none;
-}
 .w-1{
   width: 8.33%;
 }
@@ -524,7 +520,6 @@ header nav ul li a:hover{
   border: none;
   background-color: #fff;
     display: inline-block;
-    cursor: pointer;
     padding: 12px 14px;
     font-weight: 700;
     color: #696969;
@@ -623,4 +618,35 @@ header nav ul li a:hover{
 
 .portfolio-overlay-itam a:hover{
   background-color: #5f5f5f;
+}
+
+
+/*====================================================
+==============personal-detail==================================
+======================================================*/
+.personal-detail{
+  background: url(../images/detailImg.jpg);
+  background-size: cover;
+  box-shadow: 5px 5px 13px #a2a2a2;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  z-index: 1
+}
+.personal-detail-content{
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.detail-overlay{
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: -115px;
+  width: 50%;
+  box-shadow: 5px 5px 13px #a2a2a2;
+  bottom: -106px;
+  z-index: -1;
 }
