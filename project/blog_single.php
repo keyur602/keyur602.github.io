@@ -119,14 +119,14 @@
 								<img src="admin_panel/images/newimages/<?php if($com2['image']){ echo $com2['image'];} ?>" alt="">
 								<span class="author-title"><?php if ($com2['name']) { echo $com2['name'] ; } ?></span>
 								<span class="comment-date"><?php if ($com2['date']) { echo substr($com2['date'], 0 ,10) ; } ?></span>
-								<p><?php if ($com2['comments']) { echo $com2['comments'] ; } ?></p>
+								<p><?php if ($com2['comments']) { echo substr($com2['comments'], 0,200) ; } ?></p>
 							</li>
 						<?php } else { ?>
 							<li class="second-comment-item">
 								<img src="admin_panel/images/newimages/<?php if($com2['image']){ echo $com2['image'];} ?>" alt="">
 								<span class="author-title"><?php if ($com2['name']) { echo $com2['name'] ; } ?></span>
 								<span class="comment-date"><?php if ($com2['date']) { echo substr($com2['date'], 0 ,10) ; } ?></span>
-								<p><?php if ($com2['comments']) { echo $com2['comments'] ; } ?></p>
+								<p><?php if ($com2['comments']) { echo substr($com2['comments'], 0,200) ; } ?></p>
 							</li>
 						<?php } $i++; } ?>
 						</ul>
