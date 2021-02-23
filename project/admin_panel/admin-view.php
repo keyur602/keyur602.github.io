@@ -1,7 +1,8 @@
 <?php
     ob_start();
     include('dblink.php');
-    include('parmition.php');
+    // include('parmition.php');
+
  if (!empty($_GET['ad_id'])) 
     {
         $id = $_GET['ad_id'];   
@@ -101,12 +102,12 @@
                                     </table>
                                 </div>
                                 <hr>
-                                <div class="card-text text-sm-center">
+                                <!-- <div class="card-text text-sm-center">
                                     <a href="#"><i class="fa fa-facebook pr-1"></i></a>
                                     <a href="#"><i class="fa fa-twitter pr-1"></i></a>
                                     <a href="#"><i class="fa fa-linkedin pr-1"></i></a>
                                     <a href="#"><i class="fa fa-pinterest pr-1"></i></a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
