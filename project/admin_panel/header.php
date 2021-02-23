@@ -110,47 +110,47 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>table</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="hed.php">header</a></li>
-                            <li><i class="menu-icon fa fa-th"></i><a href="header_forms.php">header Form</a></li>
-                            <li><i class="fa fa-table"></i><a href="tables.php">sub Table</a></li>
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms.php">sub Form</a></li>
+                            <li><i class="fa fa-table"></i><a href="tables.php">header</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="forms.php">header Form</a></li>
                         </ul>
                     </li>
-                    <?php $slid = "select * from hed";
+                <?php $slid = "select * from addtable ORDER by name";
                           $slid1 = mysqli_query($con,$slid);
                           while ($slid2 = mysqli_fetch_array($slid1)) { ?>                
                         <li class="menu-item-has-children menu-item dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i><?php echo $slid2['hed']; ?></a>
-                           <ul class="sub-menu children dropdown-menu">
-                        <?php $sslid = "select * from hedtab ";
-                            $sslid1 = mysqli_query($con,$sslid);
-                            while ($sslid2 = mysqli_fetch_array($sslid1)) { 
-                            if ($sslid2['hed_id']==$slid2['hed_id']) { ?>                            
-                                <li><i class="fa fa-table"></i><a href="<?php if(!empty($sslid2['url'])){ echo $sslid2['url']; } ?>"><?php if(!empty($sslid2['name'])){ echo $sslid2['name']; } ?></a></li>
-                            <?php } }  ?>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i><?php echo $slid2['name']; ?></a>
+                           <ul class="sub-menu children dropdown-menu">                          
+                                <?php if(!empty($slid2['tableurl'])){ ?>
+                                <li><i class="fa fa-table"></i><a href="<?php if(!empty($slid2['tableurl'])){ echo $slid2['tableurl']; } ?>"><?php if(!empty($slid2['tablename'])){ echo $slid2['tablename']; } ?></a></li>
+                                <?php } ?>
+                                <?php if(!empty($slid2['formurl'])){ ?>
+                                <li><i class="fa fa-table"></i><a href="<?php if(!empty($slid2['formurl'])){ echo $slid2['formurl']; } ?>"><?php if(!empty($slid2['formname'])){ echo $slid2['formname']; } ?></a></li>
+                                <?php } ?>
+                                <?php if(!empty($slid2['comanturl'])){ ?>
+                                <li><i class="fa fa-table"></i><a href="<?php if(!empty($slid2['comanturl'])){ echo $slid2['comanturl']; } ?>"><?php if(!empty($slid2['comantname'])){ echo $slid2['comantname']; } ?></a></li>
+                            <?php } ?>
                             </ul> 
                         </li>
-                
-                    <?php } ?>
-
+                    <?php }  ?>
                 <?php }else{ ?>
-                    <?php $slid = "select * from hed ORDER BY hed";
+                    <?php $slid = "select * from addtable ORDER by name";
                           $slid1 = mysqli_query($con,$slid);
-                          while ($slid2 = mysqli_fetch_array($slid1)) { 
-                          if ($slid2['status']=='1') { ?>                
+                          while ($slid2 = mysqli_fetch_array($slid1)) { if ($slid2['status']=='1') { ?>                
                         <li class="menu-item-has-children menu-item dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i><?php echo $slid2['hed']; ?></a>
-                           <ul class="sub-menu children dropdown-menu">
-                        <?php $sslid = "select * from hedtab where `status`='1'";
-                            $sslid1 = mysqli_query($con,$sslid);
-                            while ($sslid2 = mysqli_fetch_array($sslid1)) { 
-                            if ($sslid2['hed_id']==$slid2['hed_id']) { ?>                            
-                                <li><i class="fa fa-table"></i><a href="<?php echo $sslid2['url']; ?>"><?php echo $sslid2['name']; ?></a></li>
-                            <?php } } ?>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i><?php echo $slid2['name']; ?></a>
+                           <ul class="sub-menu children dropdown-menu">                          
+                                 <?php if(!empty($slid2['tableurl'])){ ?>
+                                <li><i class="fa fa-table"></i><a href="<?php if(!empty($slid2['tableurl'])){ echo $slid2['tableurl']; } ?>"><?php if(!empty($slid2['tablename'])){ echo $slid2['tablename']; } ?></a></li>
+                                <?php } ?>
+                                <?php if(!empty($slid2['formurl'])){ ?>
+                                <li><i class="fa fa-table"></i><a href="<?php if(!empty($slid2['formurl'])){ echo $slid2['formurl']; } ?>"><?php if(!empty($slid2['formname'])){ echo $slid2['formname']; } ?></a></li>
+                                <?php } ?>
+                                <?php if(!empty($slid2['comanturl'])){ ?>
+                                <li><i class="fa fa-table"></i><a href="<?php if(!empty($slid2['comanturl'])){ echo $slid2['comanturl']; } ?>"><?php if(!empty($slid2['comantname'])){ echo $slid2['comantname']; } ?></a></li>
+                            <?php } ?>
                             </ul> 
                         </li>
-                
-                    <?php } }?>
+                    <?php } } ?>
                 <?php } ?>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -250,7 +250,7 @@
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa- user"></i><?php echo $hedqu2['name']; ?></a>
+                            <a class="nav-link" href="admin-view.php?ad_id=<?php echo $hedqu2['id']; ?>"><i class="fa fa- user"></i><?php echo $hedqu2['name']; ?></a>
 
                             <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span class="count">13</span></a>
 
