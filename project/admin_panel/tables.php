@@ -1,12 +1,22 @@
 <?php 
     ob_start();
     include('header.php');
-    include('parmition.php');
+    // include('parmition.php');
+    $name = $_SESSION['name'];
+
+    $par = "select * from admin_data where `name`='$name'";
+    $par1=mysqli_query($con,$par);
+    $par2=mysqli_fetch_array($par1);
+
+    if ($par2['logtip'] != 'admin') {
+       
+            header('location:index.php');         
+    }
     
     if (!empty($_GET['ad_id'])) 
     {
         $id=$_GET['ad_id'];
-        $q="delete from hedtab where `hedtab_id`='$id'"; 
+        $q="delete from addtable where `table_id`='$id'"; 
         mysqli_query($con,$q);
     }
    if (!empty($_GET['sdid'])) 
@@ -14,19 +24,19 @@
         if ($_GET['status']=='deacitve') 
         {
            $id = $_GET['sdid'];
-           $st="update hedtab set `status`='1' where `hedtab_id`='$id'";
+           $st="update addtable set `status`='1' where `table_id`='$id'";
            mysqli_query($con,$st);
         }
         else if ($_GET['status']=='acitve')
         {
             $id = $_GET['sdid'];
-            $st="update hedtab set `status`='0' where `hedtab_id`='$id'";
+            $st="update addtable set `status`='0' where `table_id`='$id'";
             mysqli_query($con,$st);   
         }
     }
 
 
-    $query = "select * from hedtab";
+    $query = "select * from addtable";
     $query1 = mysqli_query($con,$query);
 
 
@@ -69,9 +79,9 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>hed_id</th>
                                             <th>Name</th>
-                                            <th>url</th>
+                                            <th>tablename</th>
+                                            <th>formname</th>
                                             <th>status</th>
                                             <th>Action</th>   
                                         </tr>
@@ -79,21 +89,21 @@
                                     <tbody>
                                         <?php while ($deta = mysqli_fetch_array($query1)) { ?>
                                             <tr>
-                                                <td><?php echo $deta['hed_id']; ?></td>
                                                 <td><?php echo $deta['name']; ?></td>
-                                                <td><?php echo $deta['url']; ?></td>
+                                                <td><?php echo $deta['tablename']; ?></td>
+                                                <td><?php echo $deta['formname']; ?></td>
                                                 <td>
                                                     <?php if ($deta['status']==0) { ?>
-                                                   <a class="btn btn-danger btn-sm" href="tables.php?status=deacitve&sdid=<?php echo $deta['hedtab_id']?>">deacitve</a>
+                                                   <a class="btn btn-danger btn-sm" href="tables.php?status=deacitve&sdid=<?php echo $deta['table_id']?>">deacitve</a>
                                                    <?php } elseif ($deta['status']==1){ ?>
-                                                   <a class="btn btn-primary btn-sm" href="tables.php?status=acitve&sdid=<?php echo $deta['hedtab_id']?>">acitve</a>
+                                                   <a class="btn btn-primary btn-sm" href="tables.php?status=acitve&sdid=<?php echo $deta['table_id']?>">acitve</a>
                                                    <?php }else{ ?>
                                                    <a class="btn btn-success btn-sm" href="tables.php">Admin</a>
                                                    <?php } ?>
 
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-danger btn-sm" href="tables.php?ad_id=<?php echo $deta['hedtab_id']; ?>">Delete</a>
+                                                    <a class="btn btn-danger btn-sm" href="tables.php?ad_id=<?php echo $deta['table_id']; ?>">Delete</a>
                                                 </td>
                                             </tr>
                                         <?php } ?>
