@@ -109,9 +109,7 @@
                                         </div>
                                     </div>
                                 </div> 
-                                    
-                            </div>
-                            <div class="card-footer">
+                                <div class="card-footer">
                             <?php if (empty($_GET['ad_id'])) {?>
 
                                 <input type="submit" name="submit" class="btn btn-success btn-sm"> 
