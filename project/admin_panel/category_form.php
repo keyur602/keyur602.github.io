@@ -93,26 +93,22 @@
                                             <small class="form-text text-muted"></small>
                                         </div>
                                     </div>
-                                </div> 
-                                    
-                            </div>
-                            <div class="card-footer">
-                            <?php if (empty($_GET['ad_id'])) {?>
+                                </div>        
+                                <div class="card-footer">
+                                <?php if (empty($_GET['ad_id'])) {?>
 
-                                <input type="submit" name="submit" class="btn btn-success btn-sm"> 
-                            <?php }else{ ?>
-                                <input type="submit" name="submit" class="btn btn-success btn-sm"> 
-                            <?php } ?>    
-                                <a class="btn btn-primary btn-sm" href="category-forms.php">Reset</a>
-                            </div>
-                                </form>
+                                    <input type="submit" name="submit" class="btn btn-success btn-sm"> 
+                                <?php }else{ ?>
+                                    <input type="submit" name="submit" class="btn btn-success btn-sm"> 
+                                <?php } ?>    
+                                    <a class="btn btn-primary btn-sm" href="category-forms.php">Reset</a>
+                                </div>
+                            </form>
                         </div>
                     </div>
-            </div>
-
-
-        </div><!-- .animated -->
-    </div><!-- .content -->
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
 
     <div class="clearfix"></div>
 
