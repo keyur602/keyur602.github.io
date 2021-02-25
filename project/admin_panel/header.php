@@ -16,10 +16,6 @@
 
 
 ?>
-
-
-
-
  <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -108,7 +104,7 @@
                 <?php if ($hedqu2['logtip']=='admin') { ?>
                    
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>table</a>
+                        <a href="#" class="dropdown-toggle keyur" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>table</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-table"></i><a href="tables.php">header</a></li>
                             <li><i class="menu-icon fa fa-th"></i><a href="forms.php">header Form</a></li>
@@ -118,7 +114,7 @@
                           $slid1 = mysqli_query($con,$slid);
                           while ($slid2 = mysqli_fetch_array($slid1)) { ?>                
                         <li class="menu-item-has-children menu-item dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i><?php echo $slid2['name']; ?></a>
+                            <a href="#" class="dropdown-toggle <?php if(!empty($slid2['tablename']) || !empty($slid2['formname']) || !empty($slid2['comantname'])){ echo 'keyur'; } ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i><?php echo $slid2['name']; ?></a>
                            <ul class="sub-menu children dropdown-menu">                          
                                 <?php if(!empty($slid2['tableurl'])){ ?>
                                 <li><i class="fa fa-table"></i><a href="<?php if(!empty($slid2['tableurl'])){ echo $slid2['tableurl']; } ?>"><?php if(!empty($slid2['tablename'])){ echo $slid2['tablename']; } ?></a></li>
@@ -137,7 +133,7 @@
                           $slid1 = mysqli_query($con,$slid);
                           while ($slid2 = mysqli_fetch_array($slid1)) { if ($slid2['status']=='1') { ?>                
                         <li class="menu-item-has-children menu-item dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i><?php echo $slid2['name']; ?></a>
+                            <a href="#" class="dropdown-toggle <?php if(!empty($slid2['tablename']) || !empty($slid2['formname']) || !empty($slid2['comantname'])){ echo 'keyur'; } ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i><?php echo $slid2['name']; ?></a>
                            <ul class="sub-menu children dropdown-menu">                          
                                  <?php if(!empty($slid2['tableurl'])){ ?>
                                 <li><i class="fa fa-table"></i><a href="<?php if(!empty($slid2['tableurl'])){ echo $slid2['tableurl']; } ?>"><?php if(!empty($slid2['tablename'])){ echo $slid2['tablename']; } ?></a></li>
