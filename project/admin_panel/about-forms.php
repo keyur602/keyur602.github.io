@@ -102,28 +102,23 @@
                                             <textarea name="content" cols="40" rows="5"><?php if(!empty($que2['content'])){echo $que2['content'];}?></textarea>
                                             <small class="form-text text-muted"></small>
                                         </div>
-                                    </div>
+                                    </div>   
+                                </div>
+                                <div class="card-footer">
+                                <?php if (empty($_GET['ad_id'])) {?>
 
-                                </div> 
-                                    
-                            </div>
-                            <div class="card-footer">
-                            <?php if (empty($_GET['ad_id'])) {?>
-
-                                <input type="submit" name="submit" class="btn btn-success btn-sm"> 
-                            <?php }else{ ?>
-                                <input type="submit" name="submit" class="btn btn-success btn-sm"> 
-                            <?php } ?>    
-                                <a class="btn btn-primary btn-sm" href="about-forms.php">Reset</a>
-                            </div>
-                                </form>
+                                    <input type="submit" name="submit" class="btn btn-success btn-sm"> 
+                                <?php }else{ ?>
+                                    <input type="submit" name="submit" class="btn btn-success btn-sm"> 
+                                <?php } ?>    
+                                    <a class="btn btn-primary btn-sm" href="about-forms.php">Reset</a>
+                                </div>
+                            </form> 
                         </div>
                     </div>
-            </div>
-
-
-        </div><!-- .animated -->
-    </div><!-- .content -->
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
 
     <div class="clearfix"></div>
 
