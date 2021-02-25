@@ -114,8 +114,6 @@
                                         </div>
                                     </div>
                                 </div> 
-                                    
-                            </div>
                             <div class="card-footer">
                             <?php if (empty($_GET['ad_id'])) {?>
 
