@@ -105,10 +105,7 @@
                                             <small class="form-text text-muted"></small>
                                         </div>
                                     </div>
-
                                 </div> 
-                                    
-                            </div>
                             <div class="card-footer">
                             <?php if (empty($_GET['ad_id'])) {?>
 
