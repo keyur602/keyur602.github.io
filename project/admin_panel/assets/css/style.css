@@ -647,7 +647,7 @@ aside.left-panel {
         position: relative; }
         .navbar .navbar-nav li.menu-item-has-children a {
           line-height: 30px; }
-          .navbar .navbar-nav li.menu-item-has-children a:before {
+          .navbar .navbar-nav li.menu-item-has-children .keyur:before {
             content: "";
             position: absolute;
             top: 23px;
