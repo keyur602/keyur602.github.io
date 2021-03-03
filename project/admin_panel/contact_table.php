@@ -1,9 +1,25 @@
 <?php
     ob_start();
     include('header.php');
-    include('parmition.php'); 
+    // include('parmition.php'); 
+            $name = $_SESSION['name'];
 
-    $query = "select * from subnav ";
+    $par = "select * from admin_data where `name`='$name'";
+    $par1=mysqli_query($con,$par);
+    $par2=mysqli_fetch_array($par1);
+
+    if ($par2['logtip'] != 'admin') {
+        $pars = "select * from addtable where `name`='contact'";
+        $pars1=mysqli_query($con,$pars);
+        $pars2=mysqli_fetch_array($pars1);
+
+        if($pars2['status']!='1'){
+            // echo $pars2['status'];
+            header('location:index.php');
+        }         
+    }
+
+    $query = "select * from contact";
     $query1 = mysqli_query($con,$query);
 
 
@@ -46,17 +62,17 @@
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>navid</th>
                                             <th>name</th>
-                                            <th>url</th>   
+                                            <th>email</th>
+                                            <th>subject</th>   
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php while ($deta = mysqli_fetch_array($query1)) { ?>
                                             <tr>
-                                                <td><?php echo $deta['navid']; ?></td>
                                                 <td><?php echo $deta['name']; ?></td>
-                                                <td><?php echo $deta['url']; ?></td>
+                                                <td><?php echo $deta['email']; ?></td>
+                                                <td><?php echo $deta['sub']; ?></td>
                                             </tr>
                                         <?php } ?>
                                     </tbody>

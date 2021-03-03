@@ -1,7 +1,16 @@
 <?php
     ob_start();
     include('header.php');
-    include('parmition.php'); 
+    // include('parmition.php'); 
+            $name = $_SESSION['name'];
+
+    $par = "select * from admin_data where `name`='$name'";
+    $par1=mysqli_query($con,$par);
+    $par2=mysqli_fetch_array($par1);
+
+    if ($par2['logtip'] != 'admin') {
+            header('location:index.php');
+    }
 
     if (!empty($_GET['ad_id'])) 
     {

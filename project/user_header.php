@@ -9,8 +9,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-	<title>YOM- Multipurpose HTML Theme</title>
+	<title>Ela</title>
 
+    <!-- <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png"> -->
+    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,800' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
@@ -43,7 +45,7 @@
 					<div id="main-header" class="main-header header-sticky">
 						<div class="inner-header clearfix">
 							<div class="logo">
-								<a href="index.php">YOM</a>
+								<a href="index.php">ela</a>
 							</div>
 							<div class="header-right-toggle pull-right hidden-md hidden-lg">
 								<a href="javascript:void(0)" class="side-menu-button"><i class="fa fa-bars"></i></a>

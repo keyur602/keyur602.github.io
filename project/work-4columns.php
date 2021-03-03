@@ -12,7 +12,7 @@ else
 $per_page = 8;
 $page = $per_page * $page;
 
-$pos ="select * from subcategory";
+$pos ="select * from subcategory WHERE `statuss`='1'";
 
 //$query ="select * from student_data_2";
 $query1 = mysqli_query($con,$pos);
@@ -67,7 +67,7 @@ $num1 = ceil($num/$per_page);
 							<div class="portfolio-page-nav text-center">
 								<ul>
 									<?php for($i=0; $i<$num1; $i++) { ?> 
-										<li><a <?php if(isset($_GET['page'])){ if ($_GET['page']==$i) {?> class="current" <?php } } elseif ($page==$i) {?> class="current" <?php } ?> href="work-4columns.php?page=<?php echo $i; ?>"><?php echo $i+1; ?></a></li>
+									<li><a <?php if(isset($_GET['page'])){ if ($_GET['page']==$i) {?> class="current" <?php } } elseif ($page==$i) {?> class="current" <?php } ?> href="work-4columns.php?page=<?php echo $i; ?>"><?php echo $i+1; ?></a></li> 
 									<?php } ?>
 								</ul>
 							</div>
