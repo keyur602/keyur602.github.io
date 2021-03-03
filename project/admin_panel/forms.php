@@ -1,17 +1,29 @@
 <?php
     ob_start();
     include('header.php');
-    include('parmition.php');
+    // include('parmition.php');
+    $name = $_SESSION['name'];
+
+    $par = "select * from admin_data where `name`='$name'";
+    $par1=mysqli_query($con,$par);
+    $par2=mysqli_fetch_array($par1);
+
+    if ($par2['logtip'] != 'admin') {
+            header('location:index.php');         
+    }
     
+    // $number=$_SESSION['number'];
 
     if (isset($_POST['submit'])) 
     {
 
-        $hed_id=$_POST['hed_id'];
-        $tablenames=$_POST['tablename'];
+        $name=$_POST['name'];
+        $tablename=$_POST['tablename'];
         $tableurl=$_POST['tableurl'];
+        $formname=$_POST['formname'];
+        $formurl=$_POST['formurl'];
         
-            $sql = "INSERT INTO `hedtab` (`hed_id`, `name`, `url`) VALUES ('$hed_id','$tablenames','$tableurl')";
+            $sql = "INSERT INTO `addtable` (`name`,`tablename`, `tableurl`, `formname`, `formurl`) VALUES ('$name','$tablename','$tableurl','$formname','$formurl')";
         
         mysqli_query($con,$sql);
 
@@ -56,6 +68,16 @@
                             <form method="post" enctype="multipart/form-data" class="form-horizontal">
                                 <div class="row form-group">
                                     <div class="col col-md-3">
+                                        <label for="text-input" class=" form-control-label">Name</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <input type="text" id="name" name="name" placeholder="Enter Table Name" class="form-control">
+                                        <small class="form-text text-muted"></small>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
                                         <label for="text-input" class=" form-control-label">Table Name</label>
                                     </div>
                                     <div class="col-12 col-md-9">
@@ -63,7 +85,7 @@
                                         <small class="form-text text-muted"></small>
                                     </div>
                                 </div>
-   
+
                                 <div class="row form-group">
                                     <div class="col col-md-3">
                                         <label for="text-input" class=" form-control-label">Table Url</label>
@@ -74,26 +96,26 @@
                                     </div>
                                 </div>
 
-                                <?php
-                                        $nav="select * from hed";
-                                        $nav1=mysqli_query($con,$nav);
-                                    ?>
-                                    <div class="row form-group">
-                                        <div class="col col-md-3">
-                                            <label for="select" class=" form-control-label">Header</label>
-                                        </div>
-                                        <div class="col-12 col-md-9">
-                                            <select name="hed_id" id="nav" class="form-control">
-                                                <option value=""> --- select header --- </option>
-                                                <?php while ($nav2=mysqli_fetch_array($nav1)) { ?>
-                                                    <option value="<?php echo $nav2['hed_id']; ?>"><?php echo $nav2['hed']; ?></option>
-                                                <?php } ?>
-                                            </select>
-                                            <small class="help-block form-text"></small>
-                                        </div>
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="text-input" class=" form-control-label">form Name</label>
                                     </div>
+                                    <div class="col-12 col-md-9">
+                                        <input type="text" id="formname" name="formname" placeholder="Enter form Name" class="form-control">
+                                        <small class="form-text text-muted"></small>
+                                    </div>
+                                </div>
+   
 
-                                     
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="text-input" class=" form-control-label">form Url</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <input type="text" id="formurl" name="formurl" placeholder="Enter form Url" class="form-control">
+                                        <small class="form-text text-muted"></small>
+                                    </div>
+                                </div>                                 
                         </div>
                             <div class="card-footer">
                                 <?php if (empty($_GET['ad_id'])) {?>
